@@ -17,6 +17,7 @@ Route::get('/', 'PagesController@root')->name('root');
 
 
 //the frame auto create route
-Auth::routes();
+//Email Verification Routes 默认是不展开,要展开的话需要加上['verify' => true]
+Auth::routes(['verify' => true]);
 
 
