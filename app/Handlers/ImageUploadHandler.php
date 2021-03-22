@@ -31,6 +31,8 @@ class ImageUploadHandler
             return false;
         }
 
+        //删除原来的头像文件
+        //unlink($upload_path.'*.*');
         // 将图片移动到我们的目标存储路径中
         $file->move($upload_path, $filename);
 
