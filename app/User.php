@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'introduction'
     ];
 
     /**
@@ -38,4 +38,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+//截取数据库中的日期，去掉了时间部分
+    public function date_limit()
+    {
+        return($this->created_at->toDateString());
+    }
 }
