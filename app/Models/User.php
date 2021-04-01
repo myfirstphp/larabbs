@@ -43,4 +43,9 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         return($this->created_at->toDateString());
     }
+
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
