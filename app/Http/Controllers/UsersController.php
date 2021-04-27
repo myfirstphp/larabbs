@@ -17,7 +17,10 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        #dd(User::all());
+        #dd(User::where('id','=',$user->id)->get());
+        #return view('users.show', compact('user'));
+        Phpinfo();
     }
 
     public function edit(User $user)

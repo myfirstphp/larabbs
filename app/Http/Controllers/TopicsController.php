@@ -11,6 +11,7 @@ use Auth;
 use App\Handlers\ImageUploadHandler;
 
 
+
 class TopicsController extends Controller
 {
     public function __construct()
@@ -94,6 +95,7 @@ class TopicsController extends Controller
                 $data['success']   = true;
             }
         }
+
         return $data;
     }
 }
