@@ -1,7 +1,7 @@
 <?php
 
-
-
+use App\Models\Reply;
+use App\Models\Topic;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,4 +31,9 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 
 Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
-Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+/*
+Route::get('test/{reply}', function (Reply $reply){
+    dd($reply->topic);
+});
+*/
