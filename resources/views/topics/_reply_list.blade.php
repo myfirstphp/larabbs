@@ -5,7 +5,7 @@
     <li class="media" name="reply{{ $reply->id }}" id="reply{{ $reply->id }}">
       <div class="media-left">
         <a href="{{ route('users.show', [$reply->user_id]) }}">
-          <img class="media-object img-thumbnail mr-3" alt="{{ $reply->user->name }}" src="{{ $reply->user->avatar }}" style="width:48px;height:48px;" />
+          <img class="media-object img-thumbnail mr-3" alt="{{ $reply->user->name }}" src="{{ (isset($reply->user->avatar) && $reply->user->avatar !== '') ? $reply->user->avatar : 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png' }}" style="width:48px;height:48px;" />
         </a>
       </div>
 
