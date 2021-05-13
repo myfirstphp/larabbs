@@ -79,8 +79,18 @@ class User extends Authenticatable implements MustVerifyEmailContract
         if (method_exists($instance, 'toDatabase')) {
             $this->increment('notification_count');
         }
-        //这个就是原来的notify函数
+        //这个就是原来的notify方法的alias
         $this->laravelNotify($instance);
+    }
+
+
+    //把所有消息通知标记为已读
+    public function markAsRead()
+    {
+        $this->notification_count = 0;
+        $this->save();
+        //这个是框架自带的markAsRead；而我们现在定义的是对框架的重写markAsRead
+        $this->unreadNotifications->markAsRead();
     }
 
 }
