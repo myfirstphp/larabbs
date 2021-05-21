@@ -33,7 +33,7 @@
     @include('layouts._footer')
 </div>
 
-<!-- 加入suuosu -->
+<!-- 加入sudosu -->
 @if (app()->isLocal())
   @include('sudosu::user-selector')
 @endif
