@@ -2,6 +2,7 @@
 
 use App\Models\Topic;
 use Illuminate\Support\Collection;
+use Arr;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,24 +39,20 @@ Route::resource('notifications', 'NotificationsController', ['only' => ['index']
 
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 
-Route::get('test/{topic}', function (Topic $topic){
-    dump($topic->replies);
-    foreach($topic->replies as $reply)
-    {
-        dump($reply);
-    }
-
-});
 
 Route::get('test', function (){
-    $obj = new Bar;
-    #$obj = new Collection(array(0=>'a',1=>'b',2=>'c',3=>'d',4=>'e',5=>'f',6=>'g',7=>'h',8=>'i',9=>'j'));
-    #dump($obj);
-    foreach($obj as $reply)
-    {
-        dump($reply);
-    }
+    $arr1 = ['c', 'b', 'a'];
+
+    $arr2 = ['中', '文', '啊'];
+
+    print_r(Arr::sort($arr2));
+
 });
+
+
+
+
+
 
 
 
