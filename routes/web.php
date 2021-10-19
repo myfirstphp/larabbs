@@ -15,7 +15,7 @@ use Illuminate\Support\Collection;
 |
 */
 
-Route::get('/', 'PagesController@root')->name('root');
+Route::get('/', 'TopicsController@index')->name('root');
 
 
 //the frame auto create route

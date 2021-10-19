@@ -488,7 +488,7 @@
       <path value="$PROJECT_DIR$/vendor/ckeditor/ckeditor" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1038" />
@@ -653,12 +653,12 @@
       <workItem from="1623118274354" duration="3326000" />
       <workItem from="1634455410355" duration="3957000" />
       <workItem from="1634541524229" duration="6596000" />
-      <workItem from="1634604199782" duration="5088000" />
+      <workItem from="1634604199782" duration="5601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455851000" />
+    <option name="totallyTimeSpent" value="456364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />

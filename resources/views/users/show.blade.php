@@ -12,7 +12,7 @@
         <div class="card-body">
           <h5><strong>个人简介</strong></h5>
           <p>{{ $user->introduction }}</p>
-          
+
           <hr>
           <h5><strong>注册于</strong></h5>
           <p>{{ $user->date_limit() }}</p>
