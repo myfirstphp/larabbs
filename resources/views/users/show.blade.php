@@ -12,9 +12,14 @@
         <div class="card-body">
           <h5><strong>个人简介</strong></h5>
           <p>{{ $user->introduction }}</p>
+          
           <hr>
           <h5><strong>注册于</strong></h5>
           <p>{{ $user->date_limit() }}</p>
+
+          <hr>
+          <h5><strong>最后活跃</strong></h5>
+          <p title="{{  $user->last_actived_at }}">{{ $user->last_actived_at->diffForHumans() }}</p>
         </div>
       </div>
     </div>
